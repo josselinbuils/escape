@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
 import './App.scss';
 import logo from './logo.svg';
@@ -13,6 +14,7 @@ class App extends Component {
           <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
+          <Button color="primary">test</Button>
         </header>
       </div>
     );
