@@ -85,7 +85,6 @@
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-floating-promises": true,
     "no-for-in-array": true,
     "no-implicit-dependencies": true,
     "no-inferrable-types": false,
