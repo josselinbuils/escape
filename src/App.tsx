@@ -5,7 +5,7 @@ import './App.scss';
 import logo from './logo.svg';
 
 class App extends Component {
-  render() {
+  render(): JSX.Element {
     return (
       <div className="App">
         <header className="App-header">

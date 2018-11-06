@@ -1,4 +1,4 @@
-import { OPEN, Server } from 'ws';
+import { Server } from 'ws';
 
 import { Logger } from './logger';
 

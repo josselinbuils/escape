@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build-client": "react-scripts build",
+    "lint": "yarn lint-client && yarn lint-server",
+    "lint-client": "tslint -c src/tslint.json -p tsconfig.json src/**/*.tsx",
     "lint-server": "tslint -c server/tslint.json -p server/tsconfig.json server/**/*.ts",
+    "start": "yarn build-client && yarn start-server",
     "start-client": "react-scripts start",
     "start-server": "ts-node --project server/tsconfig.json server/server.ts",
-    "build-client": "react-scripts build",
     "test-client": "react-scripts test"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
@@ -34,6 +34,7 @@
     "serve-static": "^1.13.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.1.6",
     "ws": "^6.1.0"
   },
