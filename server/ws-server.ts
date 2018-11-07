@@ -1,11 +1,12 @@
 import { Store } from 'redux';
-import { Server } from 'ws';
+import { OPEN, Server } from 'ws';
 
 import { Logger } from './logger';
 
 export class WsServer extends Server {
   static async listen(port: number, store: Store): Promise<void> {
     return new Promise<void>(resolve => {
+
       const server = new Server({ port }, () => {
         Logger.info(`WebSocket server is listening on port ${port}`);
         resolve();
@@ -14,14 +15,19 @@ export class WsServer extends Server {
       server.on('connection', ws => {
         Logger.info('New connection');
 
+        // Sends current state, should be sent using server rendering
         ws.send(JSON.stringify(store.getState()));
 
-        ws.on('message', message => {
-          Logger.info(`Message received: ${message}`);
-        });
+        ws.on('message', (action: string) => {
+          Logger.info(`Action received: ${action}`);
 
-        ws.on('close', () => {
-          Logger.info('Connection closed');
+          store.dispatch(JSON.parse(action));
+
+          server.clients.forEach(client => {
+            if (client.readyState === OPEN) {
+              client.send(action);
+            }
+          });
         });
       });
     });
