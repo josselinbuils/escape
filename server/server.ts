@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
-import rootReducer from '../src/reducers/rootReducer';
+import rootReducer from '../src/root-reducer';
 
 import { PORT_HTTP, PORT_WS } from './constants';
 import { HttpServer } from './http-server';

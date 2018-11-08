@@ -1,7 +1,7 @@
 import { Action, ActionCreator, applyMiddleware, createStore, Middleware, Store } from 'redux';
 
 import { Deferred, DeferredState } from './deferred';
-import rootReducer from './reducers/rootReducer';
+import rootReducer from './root-reducer';
 
 export class SharedStore {
   private localStore?: Store;
