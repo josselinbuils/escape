@@ -3,7 +3,7 @@ import { join } from 'path';
 import { applyMiddleware, createStore, Store } from 'redux';
 import thunk from 'redux-thunk';
 
-import rootReducer from '../src/rootReducer';
+import rootReducer from '../src/utils/rootReducer';
 
 import { EXIT_EVENTS, PORT_HTTP, PORT_WS } from './constants';
 import { HttpServer } from './http-server';

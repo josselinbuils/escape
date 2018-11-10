@@ -3,9 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from './App';
+import { App } from './App';
 import './index.scss';
-import { SharedStore } from './sharedStore';
+import { SharedStore } from './utils/sharedStore';
 
 const sharedStore = new SharedStore();
 

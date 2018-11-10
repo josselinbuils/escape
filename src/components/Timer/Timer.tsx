@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Fade } from 'reactstrap';
 
-class Index extends Component<any> {
+class Timer extends Component<any> {
   render(): JSX.Element {
     return (
       <div>
@@ -15,5 +15,6 @@ class Index extends Component<any> {
 }
 
 const mapStateToProps = (state: any) => (state.timerReducer);
+const connectedTimer = connect(mapStateToProps)(Timer);
 
-export default connect(mapStateToProps)(Index);
+export { connectedTimer as Timer };

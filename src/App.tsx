@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import './App.scss';
-import Timer from './components/Timer';
-import TimerControls from './components/Timer/Controls';
+import { Admin } from './components/Admin';
+import { Escape } from './components/Escape';
 
-class App extends Component<any> {
+export class App extends Component<any> {
   render(): JSX.Element {
     return (
-      <div className="App">
-        <header className="App-header">
-          <TimerControls />
-          <Timer />
-        </header>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path="/" component={Escape} />
+          <Route path="/admin" component={Admin} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
-
-export default App;
