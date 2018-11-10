@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import './App.scss';
-import Timer from './Timer';
-import TimerController from './Timer/TimerController';
+import Timer from './components/Timer';
+import TimerControls from './components/Timer/Controls';
 
 class App extends Component<any> {
   render(): JSX.Element {
     return (
       <div className="App">
         <header className="App-header">
-          <TimerController />
+          <TimerControls />
           <Timer />
         </header>
       </div>

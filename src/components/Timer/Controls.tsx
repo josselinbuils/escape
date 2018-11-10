@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 
 import { startMainTimer, stopMainTimer } from './actions';
 
-class TimerController extends Component<any> {
+class Controls extends Component<any> {
   render(): JSX.Element {
     const mainStarted = this.props.main.started;
 
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   stopMainTimer: () => dispatch(stopMainTimer()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TimerController);
+export default connect(mapStateToProps, mapDispatchToProps)(Controls);
