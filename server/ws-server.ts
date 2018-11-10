@@ -1,7 +1,7 @@
 import { Action, Store } from 'redux';
 import { OPEN, Server } from 'ws';
 
-import { stopMainTimer, TIMER_START_MAIN, TIMER_STOP_MAIN, updateMainTimer } from '../src/timer/actions';
+import { stopMainTimer, TIMER_START_MAIN, TIMER_STOP_MAIN, updateMainTimer } from '../src/Timer/actions';
 
 import { Logger } from './logger';
 

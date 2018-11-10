@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import './index.scss';
-import { SharedStore } from './shared-store';
+import { SharedStore } from './sharedStore';
 
 const sharedStore = new SharedStore();
 

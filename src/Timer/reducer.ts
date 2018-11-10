@@ -28,7 +28,7 @@ function mainTimerReducer(state: MainTimerState = { started: false }, action: An
   return state;
 }
 
-interface TimerState {
+export interface TimerState {
   main: MainTimerState;
 }
 

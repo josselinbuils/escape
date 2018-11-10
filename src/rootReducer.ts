@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { timerReducer } from './timer/reducer';
+import { timerReducer } from './Timer/reducer';
 
 export default combineReducers({
   timerReducer,
